@@ -63,7 +63,7 @@ HOST_LN="$(subst ${STAGING_DIR_HOST},$${STAGING_DIR_HOST},$(LN))"
 		"$${IPKG_INSTROOT}/usr/lib/lua/luci/controller/admin/ota.lua" \
 		"$${IPKG_INSTROOT}/bin/config_generate"
 
-	$${HOST_SED} "s/'192\\.168\\.1\\.1'/'192.168.100.1'/; s/'openwrt\\.lan'/window.location.host/" "$${IPKG_INSTROOT}/www/luci-static/resources/view/system/flash.js"
+	$${HOST_SED} "s/'192\\.168\\.1\\.1'/'10.0.0.1'/; s/'openwrt\\.lan'/window.location.host/" "$${IPKG_INSTROOT}/www/luci-static/resources/view/system/flash.js"
 
 	$${HOST_SED} 's/s\.anonymous = true/s\.anonymous = true\ns\.addremove = true/' "$${IPKG_INSTROOT}/usr/lib/lua/luci/model/cbi/hd_idle.lua"
 
