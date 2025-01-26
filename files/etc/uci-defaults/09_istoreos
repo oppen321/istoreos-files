@@ -36,7 +36,7 @@ else
             set firewall.allow_wan_input.proto='all'
             set firewall.allow_wan_input.src='wan'
             set firewall.allow_wan_input.target='ACCEPT'
-            set firewall.allow_wan_input.enabled='0'
+            set firewall.allow_wan_input.enabled='1'
             commit firewall
 EOF
     fi
